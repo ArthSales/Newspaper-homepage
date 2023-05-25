@@ -1,0 +1,218 @@
+/*headline*/
+.main{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.main__content-firstpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.main__headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.headline__img {
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.headline__title {
+    color: var(--neutral-very-dark);
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.headline__read-more {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--neutral-white);
+    background-color: var(--secondary-color);
+    letter-spacing: 3px;
+    padding: 1em 2em;
+    text-align: center;
+    width: 31vw;
+}
+
+
+/*other-news with flex to positioning*/
+.main__other-news {
+    background-color: var(--neutral-very-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: left;
+    padding: 2em 1em;
+}
+
+.main__other-news__title {
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.other-news__text {
+    color: var(--neutral-blue);
+}
+
+.other-news__link {
+    text-decoration: none;
+    color: var(--neutral-white);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+hr {
+    margin: 2em 0 2em 0;
+    width: 21em;
+}
+
+/*top-3-section with grid to positioning*/
+
+.main__top-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.top-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.top-3__img {
+    align-self: center;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.top-3__number {
+    align-self: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--neutral-blue);
+    padding-left: 0.5em;
+}
+
+.top-3__link {
+    text-decoration: none;
+    align-self: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: var(--neutral-very-dark);
+    font-weight: 800;
+    font-size: 18px;
+    padding-left: 1em;
+}
+
+.top-3__text {
+    font-size: medium;
+    align-self: flex-start;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    color: var(--neutral-dark-blue);
+    padding-left: 1.2em;
+}
+
+/* hover to links */
+
+.headline__read-more:hover {
+    background-color: var(--neutral-very-dark);
+}
+
+.other-news__link:hover {
+    color: var(--primary-color);
+}
+
+.top-3__link:hover, .item__link:hover {
+    color: var(--secondary-color);
+}
+
+@media screen and (min-width: 1440px) {
+    
+    .main__content-firstpage {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+        flex-direction: row;
+    }
+
+    .main__headline {
+        display: grid;
+        width: 75vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .headline__img {
+        image-orientation: initial;
+        display: flex;
+        align-self: center;
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        margin: 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .headline__title {
+        padding-right: 2em;
+        font-size: 56px;
+        align-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .headline__text {
+        padding-top: 0.5em;
+        font-size: 20px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .headline__read-more {
+        width: 30%;
+        align-self: flex-end;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .main__top-3 {
+        flex-direction: row;
+    }
+}
